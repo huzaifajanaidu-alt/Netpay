@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== REGISTER PAGE ONLY ===== */
+
+.register-page{
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #f8fafc, #eaf1ff);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* HEADER */
+.register-page .header{
+    width: 100%;
+    background: #0a1f44;
+    color: #ffffff;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.register-page .header h2{
+    font-size: 22px;
+}
+
+.register-page .header nav a{
+    color: #ffffff;
+    margin-left: 15px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* TITLE */
+.register-page h1{
+    color: #0a1f44;
+    margin-bottom: 25px;
+}
+
+/* LOGO */
+.register-page img{
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+/* FORM */
+.register-page form{
+    background: #ffffff;
+    width: 100%;
+    max-width: 420px;
+    padding: 35px 30px;
+    border-radius: 14px;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.1);
+}
+
+/* INPUTS */
+.register-page form input{
+    width: 100%;
+    padding: 14px 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    outline: none;
+}
+
+/* BUTTON */
+.register-page .register{
+    width: 100%;
+    padding: 14px;
+    background: #0a1f44;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* LOGIN LINK */
+.register-page form a{
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    color: #0a1f44;
+    text-decoration: none;
+}
+
+/* FOOTER */
+.register-page footer{
+    margin-top: auto;
+    padding: 20px;
+    color: #64748b;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register | Netpay</title>
+  <link rel="stylesheet" href="register.css">
+</head>
+
+<body class="register-page">
+
+<header class="header">
+  <h2>Netpay</h2>
+  <nav>
+    <a href="Home page.html">Home</a>
+    <a href="Register form.html">Register</a>
+    <a href="login form.html">Login</a>
+  </nav>
+</header>
+
+<img src="weblogo.png" alt="Netpay Logo" width="20%">
+
+<h1>Create Your Account</h1>
+
+<form id="register" action="process_register.php" method="post">
+
+<input type="text" name="name" placeholder="Full Name" required>
+
+<input type="email" name="email" placeholder="Email Address" required>
+
+<input type="tel" name="phone" placeholder="Phone Number" required>
+
+<input type="password" name="password" placeholder="Create Password" required>
+
+<input type="password" placeholder="Confirm Password" required>
+
+<input type="text" placeholder="Referral Code (Optional)">
+
+<button type="submit" class="register">Register</button>
+
+<a href="login.html">Already have an account?</a>
+
+</form>
+
+<footer>
+  <p>© 2025 Netpay. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

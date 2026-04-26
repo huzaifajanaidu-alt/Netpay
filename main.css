@@ -1,0 +1,42 @@
+
+
+
+/*spinnin processing
+.spinner {
+  width: 60px;
+  height: 60px;
+  position: relative;
+}
+
+.spinner::before,
+.spinner::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 6px dotted #000;
+  animation: spin 1s linear infinite;
+}
+
+.spinner::after {
+  animation-direction: reverse;
+  opacity: 0.5;
+}
+
+
+
+/*#loader{
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+background: #0b2c5f;
+color: white;
+padding: 15px 25px;
+border-radius: 10px;
+}*/
+
+
+
+

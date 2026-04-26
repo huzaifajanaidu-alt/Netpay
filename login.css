@@ -1,0 +1,193 @@
+/* LOGIN PAGE ONLY */
+/* ============================= */
+
+.login-page{
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #f8fafc, #eaf1ff);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* HEADER */
+.login-page .header{
+    width: 100%;
+    background: #0a1f44;
+    color: #ffffff;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.login-page .header h2{
+    font-size: 22px;
+}
+
+.login-page .header nav a{
+    color: #ffffff;
+    margin-left: 15px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.login-page .header nav a:hover{
+    color: #00b4ff;
+}
+
+/* TITLE */
+.login-page h1{
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: #0a1f44;
+    font-size: 26px;
+}
+
+/* FORM CARD */
+.login-page form{
+    background: #ffffff;
+    width: 100%;
+    max-width: 420px;
+    padding: 35px 30px;
+    border-radius: 14px;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* LOGO */
+.login-page form img{
+    margin-bottom: 20px;
+}
+
+/* INPUTS */
+.login-page form input{
+    width: 100%;
+    padding: 14px 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    font-size: 14px;
+    transition: all 0.25s ease;
+}
+
+.login-page form input:focus{
+    outline: none;
+    border-color: #0a1f44;
+    box-shadow: 0 0 0 3px rgba(10,31,68,0.1);
+}
+
+/* LOGIN BUTTON */
+.login-page .login{
+    width: 100%;
+    padding: 14px;
+    background: #0a1f44;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login-page .login:hover{
+    background: #0d47a1;
+}
+
+/* FORGOT PASSWORD */
+.login-page form a{
+    display: block;
+    margin-top: 15px;
+    color: #0a1f44;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.login-page form a:hover{
+    color: #0d47a1;
+}
+
+/* FOOTER */
+.login-page footer{
+    margin-top: auto;
+    padding: 20px;
+    color: #64748b;
+    font-size: 13px;
+}
+
+
+
+
+
+
+/* ===== RESET ===== */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+/* ===== BODY ===== */
+body{
+    background: #f4f7fb;
+    color: #1f2937;
+}
+
+/* ===== HEADER ===== */
+.header{
+    background: #0a1f44;
+    color: #ffffff;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header nav a{
+    color: #ffffff;
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.header nav a:hover{
+    color: #00b4ff;
+}
+
+
+
+
+/* ===== RESET ===== */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+/* ===== BODY ===== */
+body{
+    background: #f4f7fb;
+    color: #1f2937;
+}
+
+/* ===== HEADER ===== */
+.header{
+    background: #0a1f44;
+    color: #ffffff;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header nav a{
+    color: #ffffff;
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.header nav a:hover{
+    color: #00b4ff;
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>VTU Dashboard</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<input type="checkbox" id="menu-toggle">
+
+   <header class="header">
+  <label for="menu-toggle" class="side-menu-btn">
+    <span></span>
+  </label>
+
+  <h2>Netpay Dashboard</h2>
+
+  <nav>
+    <a href="dashboard.html">Logout</a>
+  </nav>
+</header>
+
+<div class="dashboard">
+
+
+  <!-- Sidebar -->
+<div class="sidebar"> <h2>NETPAY2 VTU</h2>
+   <ul>
+     <li>🏠 Dashboard</li>
+     <li>📱 Buy Airtime</li> 
+     <li>🌐 Buy Data</li> 
+     <li>📺 Cable TV</li>
+      <li>💡 Electricity</li> 
+      <li>💼 Wallet</li> 
+      <li>📄 Transactions</li> 
+      <li>⚙️ Settings</li> 
+    </ul>
+   </div>
+
+  <!-- Main Content -->
+  <div class="main">
+
+    <!-- Top Bar -->
+    <div class="topbar">
+      <h3>Welcome, Ankuzai</h3>
+      <button class="fund-btn">+ Fund Wallet</button>
+    </div>
+
+    <!-- Wallet Card -->
+    <div class="wallet">
+      <p>Wallet Balance</p>
+      <h1>₦12,500.00</h1>
+    </div>
+
+
+    <!-- Services -->
+<div class="dash-service" onclick="window.location.href='airtime.html'"> 
+  <img src="suppor.png" width="20" height="15"> Airtime
+</div>
+
+  <a href="data.html"> <div class="dash-service"> 
+    <img src="data1.png" width="20" height="15"> Data </div> </a>
+
+  <div class="dash-service">
+    <img src="cash.png" width="20" height="15">
+    Airtime 2 Cash
+  </div>
+
+  <div class="dash-service">
+    <img src="setting.png" width="20" height="15">
+    Smile Voice
+  </div>
+
+  <div class="dash-service">
+    <img src="exam.png" width="20" height="15">
+    Exam pin
+  </div>
+
+  <div class="dash-service">
+    <img src="donelogo.png" width="20" height="15">
+    Electricity Bill
+  </div>
+
+
+</div>
+
+
+    
+    <!-- Transactions -->
+    <div class="transactions">
+      <h4>Recent Transactions</h4>
+      <table>
+        <tr>
+          <th>Service</th>
+          <th>Amount</th>
+          <th>Status</th>
+        </tr>
+        <tr>
+          <td>Airtime</td>
+          <td>₦1,000</td>
+          <td class="success">Success</td>
+        </tr>
+        <tr>
+          <td>Data</td>
+          <td>₦2,500</td>
+          <td class="success">Success</td>
+        </tr>
+        <tr>
+          <td>TV</td>
+          <td>₦4,300</td>
+          <td class="pending">Pending</td>
+        </tr>
+      </table>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>

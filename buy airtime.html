@@ -1,0 +1,205 @@
+<?php
+session_start();
+include 'config.php';
+
+if(!isset($_SESSION['user_id'])){
+    header("Location: login.php");
+    exit();
+}
+
+// Karɓi bayanai
+$phone = $_POST['phone'];
+$network = $_POST['network'];
+$amount = $_POST['amount'];
+$user_id = $_SESSION['user_id'];
+
+// Duba wallet
+$sql = "SELECT wallet FROM users WHERE id='$user_id'";
+$result = $conn->query($sql);
+$user = $result->fetch_assoc();
+
+if($user['wallet'] < $amount){
+    $_SESSION['error'] = "insufficient balance fund your wallet and try again";
+    header("Location: airtime.php");
+    exit();
+}
+
+// API request
+$api_url = VTU_BASE_URL . "/airtime";
+
+$data = [
+    "api_key" => VTU_API_KEY,
+    "phone" => $phone,
+    "network" => $network,
+    "amount" => $amount
+];
+
+$curl = curl_init($api_url);
+curl_setopt($curl, CURLOPT_POST, true);
+curl_setopt($curl, CURLOPT_POSTFIELDS, http_build_query($data));
+curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+
+$response = curl_exec($curl);
+curl_close($curl);
+
+$res = json_decode($response, true);
+
+// RESULT
+if($res['status'] == 'success'){
+
+    $new_wallet = $user['wallet'] - $amount;
+    $conn->query("UPDATE users SET wallet='$new_wallet' WHERE id='$user_id'");
+
+    $conn->query("INSERT INTO transactions (user_id, service, amount, status, created_at)
+                  VALUES ('$user_id', 'Airtime', '$amount', 'Success', NOW())");
+
+    $_SESSION['success'] = "You have sucessful purchased!";
+    header("Location: airtime.php");
+    exit();
+
+} else {
+
+    $conn->query("INSERT INTO transactions (user_id, service, amount, status, created_at)
+                  VALUES ('$user_id', 'Airtime', '$amount', 'Failed', NOW())");
+
+    $_SESSION['error'] = "Transaction failed!";
+    header("Location: airtime.php");
+    exit();
+}
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<?php
+session_start();
+include 'config.php';
+
+if(!isset($_SESSION['user_id'])){
+    header("Location: login.php");
+    exit();
+}
+
+// Karɓi bayanai
+$phone = $_POST['phone'];
+$network = $_POST['network'];
+$amount = $_POST['amount'];
+$user_id = $_SESSION['user_id'];
+
+// Duba wallet
+$sql = "SELECT wallet FROM users WHERE id='$user_id'";
+$result = $conn->query($sql);
+$user = $result->fetch_assoc();
+
+  $_SESSION['success'] = "You have sucessful purchased!";
+    header("Location: airtime.php");
+    exit();
+
+?>
+}
+
+// API request
+$api_url = VTU_BASE_URL . "/airtime";
+
+$data = [
+    "api_key" => VTU_API_KEY,
+    "phone" => $phone,
+    "network" => $network,
+    "amount" => $amount
+];
+
+$curl = curl_init($api_url);
+curl_setopt($curl, CURLOPT_POST, true);
+curl_setopt($curl, CURLOPT_POSTFIELDS, http_build_query($data));
+curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+
+$response = curl_exec($curl);
+curl_close($curl);
+
+$res = json_decode($response, true);
+
+// RESULT
+if($res['status'] == 'success'){
+
+    $new_wallet = $user['wallet'] - $amount;
+    $conn->query("UPDATE users SET wallet='$new_wallet' WHERE id='$user_id'");
+
+    $conn->query("INSERT INTO transactions (user_id, service, amount, status, created_at)
+                  VALUES ('$user_id', 'Airtime', '$amount', 'Success', NOW())");
+
+    $_SESSION['success'] = "You have sucessful purchased!";
+    header("Location: airtime.php");
+    exit();
+
+} else {
+
+    //$conn->query("INSERT INTO transactions (user_id, service, amount, status, created_at)
+                  //VALUES ('$user_id', 'Airtime', '$amount', 'Failed', NOW())");
+
+                    $new_wallet = $user['wallet'] - $amount;
+    $conn->query("UPDATE users SET wallet='$new_wallet' WHERE id='$user_id'");
+
+    $conn->query("INSERT INTO transactions (user_id, service, amount, status, created_at)
+                  VALUES ('$user_id', 'Airtime', '$amount', 'Success', NOW())");
+
+    $_SESSION['success'] = "You have sucessful purchased!";
+    header("Location: airtime.php");
+    exit();
+
+    
+    $_SESSION['success'] = "You have sucessful purchased!";
+    header("Location: airtime.php");
+    exit();
+}
+?>
